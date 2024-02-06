@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import React, { useEffect, useState, useCallback } from 'react';
 import Typewriter from 'typewriter-effect';
 import Icons from './Icons';
@@ -7,17 +7,6 @@ interface MouseType {
     x: number;
     y: number;
 }
-
-type Variants = {
-    [key: string]: {
-        x: number;
-        y: number;
-        backgroundColor?: string;
-        width?: number;
-        height?: number;
-        mixBlendMode?: string
-    };
-};
 
 const Hero: React.FC = () => {
     const [mousePosition, setMousePosition] = useState<MouseType>({ x: 0, y: 0 });
@@ -91,21 +80,21 @@ const Hero: React.FC = () => {
                                 />
                             </div>
                         </h1>
-                        <h1
+                        {/* <h1
                             onMouseEnter={textEnter}
                             onMouseLeave={textLeave}
                             className="text-white text-2xl md:text-3xl lg:text-4xl font-bold cursor-none"
                         >
                             How about going on a journey?
-                        </h1>
+                        </h1> */}
                     </div>
-                    <button
+                    {/* <button
                         onMouseEnter={textEnter}
                         onMouseLeave={textLeave}
                         className="btn btn-sm sm:btn-sm md:btn-md lg:btn-lg mt-5 cursor-none"
                     >
                         Let's Go
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>
